@@ -1,0 +1,6 @@
+{
+  "name": "WIC Ebook Generator",
+  "description": "Tools produksi produk digital berbasis AI untuk mengubah ide tulisan menjadi Ebook dan Workbook terstruktur yang siap digunakan dan dijual.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

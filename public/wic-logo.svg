@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Outer sphere dark emerald 3D gradient -->
+    <radialGradient id="sphereGrad" cx="35%" cy="30%" r="65%" fx="30%" fy="25%">
+      <stop offset="0%" stop-color="#2a7a4f"/>
+      <stop offset="30%" stop-color="#145233"/>
+      <stop offset="70%" stop-color="#0b3820"/>
+      <stop offset="100%" stop-color="#04170d"/>
+    </radialGradient>
+
+    <!-- Glossy specular highlight -->
+    <radialGradient id="specular" cx="38%" cy="28%" r="45%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Center dark disc gradient -->
+    <radialGradient id="innerDisc" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#1f1f1f"/>
+      <stop offset="85%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+
+    <!-- Subtle rim light -->
+    <linearGradient id="rimLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Outer sphere -->
+  <circle cx="200" cy="200" r="185" fill="url(#sphereGrad)" filter="url(#subtleShadow)"/>
+  
+  <!-- Outer rim stroke highlight -->
+  <circle cx="200" cy="200" r="184" fill="none" stroke="url(#rimLight)" stroke-width="2"/>
+
+  <!-- Specular top reflection -->
+  <ellipse cx="180" cy="140" rx="140" ry="90" fill="url(#specular)"/>
+
+  <!-- Inner black circle -->
+  <circle cx="200" cy="200" r="115" fill="url(#innerDisc)" stroke="#092014" stroke-width="2"/>
+
+  <!-- Bottom inner bounce reflection -->
+  <ellipse cx="200" cy="310" rx="90" ry="25" fill="#1b5e37" opacity="0.15"/>
+
+  <!-- WIC script & growth arrow -->
+  <g id="wic-logo-mark">
+    <!-- Cursive wic text & arrow line: starts low left (x: 85, y: 255), weaves through w, i, c and extends to arrow at (x: 350, y: 125) -->
+    <path 
+      d="M 85 258 C 115 250, 135 240, 148 220 C 153 212, 156 195, 142 196 C 130 197, 133 234, 152 230 C 163 228, 172 208, 177 195 C 182 185, 187 186, 181 202 C 173 222, 178 228, 192 225 C 205 222, 218 190, 222 178 C 224 172, 228 174, 227 185 C 224 207, 228 224, 240 220 C 253 216, 260 196, 252 175 C 242 150, 220 180, 220 198 C 220 222, 248 214, 265 198 C 290 174, 320 148, 342 128" 
+      fill="none" 
+      stroke="#ffffff" 
+      stroke-width="12" 
+      stroke-linecap="round" 
+      stroke-linejoin="round"
+    />
+
+    <!-- Dot over 'i' -->
+    <circle cx="218" cy="158" r="7.5" fill="#ffffff"/>
+
+    <!-- Arrow head pointing up-right at (352, 120) -->
+    <polygon points="356,118 335,123 346,138" fill="#ffffff"/>
+  </g>
+</svg>
